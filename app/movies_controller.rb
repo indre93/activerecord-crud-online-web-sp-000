@@ -29,7 +29,7 @@ def can_be_created_in_a_block(movie={})
   # release_date == 1990
 
   movie = Movie.create do |m|
-    m.title = "#{title}"
+    m.title = "#{movie.title}"
   end
 end
 
