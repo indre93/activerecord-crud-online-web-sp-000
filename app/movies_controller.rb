@@ -27,9 +27,13 @@ def can_be_created_in_a_block(args = nil)
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
-
-  movie = Movie.create do |m|
-    m.title = "Home Alone"
+  if arg == nil
+    Movie.create do |m|
+      m.title = "Home Alone"
+      m.require_date = 1990
+    else
+      Movie.create(args)
+    end
   end
 end
 
