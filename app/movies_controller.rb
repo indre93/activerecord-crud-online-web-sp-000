@@ -29,8 +29,8 @@ def can_be_created_in_a_block(args = nil)
   # release_date == 1990
   if args == nil
     Movie.create do |m|
-      m.title = "Home Alone"
-      m.release_date = 1990
+      m.title = title
+      m.release_date = release_date
     end
   else
     Movie.create(args)
