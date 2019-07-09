@@ -28,8 +28,7 @@ def can_be_created_in_a_block(args = {})
   # title == "Home Alone"
   # release_date == 1990
 
-  movie = Movie.create do |m|
-    movie.self = "#{m}"
+  movie = Movie.create(attributes = {})]
   end
 end
 
